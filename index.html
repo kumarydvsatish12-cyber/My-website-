@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satish Yadav Academy - Advanced Education Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .custom-button {
+            transition: all 0.3s ease;
+        }
+        .custom-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .course-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        .testimonials {
+            position: relative;
+            overflow: hidden;
+        }
+        .testimonial-carousel {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .testimonial-slide {
+            min-width: 100%;
+            padding: 2rem;
+        }
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #ff6b6b;
+        }
+        @media (max-width: 768px) {
+            .hero-text {
+                font-size: 2xl;
+            }
+            .section-padding {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-purple-600">Satish Yadav Academy</h1>
+                </div>
+                <div class="flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-purple-600">Home</a>
+                    <a href="#courses" class="nav-link text-gray-700 hover:text-purple-600">Courses</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-purple-600">About</a>
+                    <a href="#testimonials" class="nav-link text-gray-700 hover:text-purple-600">Testimonials</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-purple-600">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <a href="#home" class="block px-4 py-2 text-gray-700 hover:text-purple-600">Home</a>
+            <a href="#courses" class="block px-4 py-2 text-gray-700 hover:text-purple-600">Courses</a>
+            <a href="#about" class="block px-4 py-2 text-gray-700 hover:text-purple-600">About</a>
+            <a href="#testimonials" class="block px-4 py-2 text-gray-700 hover:text-purple-600">Testimonials</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-700 hover:text-purple-600">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between flex-col md:flex-row">
+            <div class="md:w-1/2">
+                <h2 class="text-4xl md:text-6xl font-bold hero-text mb-6">Advance Your Learning with Satish Yadav Academy</h2>
+                <p class="text-lg md:text-xl mb-8">Unlock the future of education through cutting-edge courses, AI-driven learning tools, and personalized mentorship for professionals and lifelong learners.</p>
+                <button class="custom-button bg-purple-700 hover:bg-purple-800 text-white px-8 py-3 rounded-lg font-semibold">Get Started Today</button>
+            </div>
+            <div class="md:w-1/2 mt-8 md:mt-0">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b5c0d6dc-2ee9-42d4-916f-d96260bd36c2.png" alt="Futuristic virtual classroom with holographic projectors displaying interactive data visualizations, advanced students collaborating in high-tech environment with AI assistants, glowing screens showing real-time learning analytics in modern educational setting" class="rounded-lg shadow-lg w-full h-auto" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Why Choose Our Advanced Platform?</h3>
+            <div class="grid md:grid-cols-3 gap-8 section-padding">
+                <div class="text-center bg-purple-50 p-6 rounded-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/91ac4b2a-2a48-4f80-87a0-47ce953578a0.png" alt="AI-powered personalized learning dashboard with adaptive course recommendations, user progress charts, and intelligent tutoring interface for seamless knowledge acquisition in interactive educational platform" class="mx-auto mb-4 rounded" />
+                    <h4 class="text-xl font-semibold mb-4">AI-Powered Personalization</h4>
+                    <p class="text-gray-600">Experience tailor-made learning paths driven by artificial intelligence to match your unique pace and goals.</p>
+                </div>
+                <div class="text-center bg-indigo-50 p-6 rounded-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c0363614-6fa8-42e1-a5a2-2f2d8737208a.png" alt="Interactive virtual reality classroom with immersive simulations, 3D models of complex concepts, and collaborative virtual labs for hands-on advanced skill development" class="mx-auto mb-4 rounded" />
+                    <h4 class="text-xl font-semibold mb-4">Immersive VR Learning</h4>
+                    <p class="text-gray-600">Dive into virtual reality environments for hands-on practice in fields like engineering, science, and technology.</p>
+                </div>
+                <div class="text-center bg-teal-50 p-6 rounded-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/78ee419f-d25a-4393-ad3d-df219a5ad828.png" alt="Expert mentorship session with live video chat, shared digital whiteboard, code collaboration tools, and real-time feedback for professional skill enhancement" class="mx-auto mb-4 rounded" />
+                    <h4 class="text-xl font-semibold mb-4">Expert Mentorship</h4>
+                    <p class="text-gray-600">Connect with industry leaders for one-on-one guidance, career advice, and networking opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Featured Advanced Courses</h3>
+            <div class="grid md:grid-cols-3 gap-8 section-padding">
+                <div class="course-card bg-white p-6 rounded-lg shadow-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c215ed7d-2fe2-4096-965d-b0a2543504ec.png" alt="Advanced machine learning course interface showing neural network architectures, data visualization charts, and interactive coding environments for deep learning mastery" class="mb-4 rounded w-full" />
+                    <h4 class="text-xl font-semibold mb-4">Machine Learning Mastery</h4>
+                    <p class="text-gray-600 mb-4">Dive deep into neural networks, reinforcement learning, and real-world applications with hands-on projects.</p>
+                    <button class="custom-button bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded">Enroll Now</button>
+                </div>
+                <div class="course-card bg-white p-6 rounded-lg shadow-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0d7f1441-6229-41a4-9ebe-77780edbdba0.png" alt="Quantum computing visualization with qubit circuits, quantum gate operations, and superposition simulations for understanding advanced computational paradigms" class="mb-4 rounded w-full" />
+                    <h4 class="text-xl font-semibold mb-4">Quantum Computing Fundamentals</h4>
+                    <p class="text-gray-600 mb-4">Explore quantum algorithms, qubits, and the principles shaping the next era of technology.</p>
+                    <button class="custom-button bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded">Enroll Now</button>
+                </div>
+                <div class="course-card bg-white p-6 rounded-lg shadow-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c6508b16-f06f-4b13-9852-b4e090d23328.png" alt="Bioinformatics workspace displaying DNA sequencing data, protein folding models, genomic analysis tools, and computational biology research interfaces" class="mb-4 rounded w-full" />
+                    <h4 class="text-xl font-semibold mb-4">Bioinformatics & Genomics</h4>
+                    <p class="text-gray-600 mb-4">Analyze genomic data, sequence alignments, and computational biology for medical and scientific breakthroughs.</p>
+                    <button class="custom-button bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded">Enroll Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c2b9dea0-89bf-4868-b5d3-5e822c07e9c6.png" alt="Portrait of Satish Yadav, professional educator in modern office setting with bookshelves, advanced technology displays, and inspirational artifacts representing education and innovation" class="rounded-lg shadow-lg w-full" />
+            </div>
+            <div class="md:w-1/2 md:pl-8">
+                <h3 class="text-3xl font-bold mb-6 text-gray-800">About Satish Yadav</h3>
+                <p class="text-lg text-gray-600 mb-6">As a pioneering educator and technology expert, Satish Yadav has dedicated his career to revolutionizing online learning. With decades of experience in software engineering, AI research, and educational innovation, he founded this academy to bridge the gap between cutting-edge technology and accessible education. His mission is to empower learners worldwide with advanced skills for the digital age.</p>
+                <ul class="list-disc list-inside text-gray-600">
+                    <li>Former lead at top tech companies</li>
+                    <li>Published author on AI and education</li>
+                    <li>Speaker at global conferences</li>
+                    <li>Developed AI-driven learning tools</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">What Our Graduates Say</h3>
+            <div class="testimonials bg-white rounded-lg shadow-lg overflow-hidden">
+                <div id="testimonial-carousel" class="testimonial-carousel">
+                    <div class="testimonial-slide text-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9e990a67-286f-4966-b248-aefd4128e1ce.png" alt="Smiling female graduate in professional attire, holding certificate, standing in innovative tech workspace with glowing screen and futuristic learning tools" class="mx-auto mb-4 rounded-full" />
+                        <p class="text-gray-600 italic mb-4">"Satish's course on AI transformed my career. The hands-on projects and mentorship were invaluable."</p>
+                        <h5 class="font-semibold">Priya Sharma</h5>
+                        <p class="text-sm text-gray-500">AI Researcher at Tech Corp</p>
+                    </div>
+                    <div class="testimonial-slide text-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f3209eeb-01be-42d7-a75a-9fd13014bbfb.png" alt="Confident male professional with award, in modern conference setting with presentation screens and networking group in background" class="mx-auto mb-4 rounded-full" />
+                        <p class="text-gray-600 italic mb-4">"The quantum computing course opened doors I never imagined. Outstanding faculty and resources."</p>
+                        <h5 class="font-semibold">Rahul Gupta</h5>
+                        <p class="text-sm text-gray-500">Quantum Engineer at Innovate Labs</p>
+                    </div>
+                    <div class="testimonial-slide text-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6cbeacb8-48e6-4e2c-ab0b-4ee7fe6d1112.png" alt="Diverse group of learners celebrating success, with certificates, group discussion, and collaborative project display in dynamic educational environment" class="mx-auto mb-4 rounded-full" />
+                        <p class="text-gray-600 italic mb-4">"Lifelong learner transformed – from novice to expert in bioinformatics thanks to Satish's approach."</p>
+                        <h5 class="font-semibold">Maya Chen</h5>
+                        <p class="text-sm text-gray-500">Research Scientist at BioTech Solutions</p>
+                    </div>
+                </div>
+                <div class="flex justify-center py-4 bg-purple-50">
+                    <button id="prev-testimonial" class="mx-2 bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded">Previous</button>
+                    <button id="next-testimonial" class="mx-2 bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded">Next</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Get in Touch</h3>
+            <div class="grid md:grid-cols-2 gap-8 section-padding">
+                <form id="contact-form" class="bg-gray-50 p-6 rounded-lg shadow-lg">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700 mb-2">Name</label>
+                        <input type="text" id="name" name="name" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-purple-600" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700 mb-2">Email</label>
+                        <input type="email" id="email" name="email" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-purple-600" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="block text-gray-700 mb-2">Message</label>
+                        <textarea id="message" name="message" rows="5" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-purple-600" required></textarea>
+                    </div>
+                    <button type="submit" class="custom-button w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded font-semibold">Send Message</button>
+                </form>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg">
+                    <h4 class="text-xl font-semibold mb-4">Contact Information</h4>
+                    <div class="mb-2">
+                        <p class="text-gray-600"><strong>Address:</strong> 123 Innovation Drive, Tech City, TC 12345</p>
+                    </div>
+                    <div class="mb-2">
+                        <p class="text-gray-600"><strong>Phone:</strong> +1 (555) 123-4567</p>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-gray-600"><strong>Email:</strong> info@satishyadavacademy.com</p>
+                    </div>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/dfe11df9-6ef0-4b02-81cf-ab014c3003a2.png" alt="Interactive campus map showing modern academy buildings, tech labs, student lounges, and outdoor learning spaces in sprawling educational complex" class="rounded shadow-md w-full mt-4" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>© 2024 Satish Yadav Academy. All rights reserved. Empowering minds through advanced learning.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="text-gray-300 hover:text-white">Privacy Policy</a>
+                <a href="#" class="text-gray-300 hover:text-white">Terms of Service</a>
+                <a href="#" class="text-gray-300 hover:text-white">FAQ</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Testimonial carousel
+        const carousel = document.getElementById('testimonial-carousel');
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.testimonial-slide');
+
+        function showSlide(index) {
+            if (index >= slides.length) currentSlide = 0;
+            if (index < 0) currentSlide = slides.length - 1;
+            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        document.getElementById('prev-testimonial').addEventListener('click', () => {
+            currentSlide--;
+            showSlide(currentSlide);
+        });
+
+        document.getElementById('next-testimonial').addEventListener('click', () => {
+            currentSlide++;
+            showSlide(currentSlide);
+        });
+
+        // Contact form submission
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const formData = new FormData(contactForm);
+            // Simulate form submission (in a real scenario, send to server)
+            alert(`Thank you ${formData.get('name')}! Your message has been sent. We'll get back to you soon at ${formData.get('email')}.`);
+            contactForm.reset
